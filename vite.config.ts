@@ -8,10 +8,15 @@ import legacy from '@vitejs/plugin-legacy'
 
 // 兩種輸出：
 // - 一般 build（預設）：現代瀏覽器用 <script type="module">，給 LiveServer / Vercel 這種
-//   走真正 http:// 的情境用，檔案小、載入快
-// - offline build（BUILD_TARGET=offline）：關掉 module chunk，全部用舊式 <script>（SystemJS）
-//   載入，因為瀏覽器對 file:// 開啟的頁面會擋掉 type="module" 的載入（CORS 限制），
-//   只有非 module 的傳統 script 才能在雙擊打開 index.html 時正常運作
+//   走真正 http:// 的情境用
+// - offline build（VITE_BUILD_TARGET=offline）：base 用相對路徑、輸出到獨立的
+//   dist-offline 資料夾（不會跟 dist 互相覆蓋，兩份可以同時保留）。legacy plugin 的
+//   兩份 bundle（modern + legacy）都留著——renderModernChunks 設 false 雖然可以讓
+//   Chrome 不去嘗試載入 module，但會連 CSS 的 <link> 一起弄丟，是這個選項本身的限制。
+//   改用 build 完後的 scripts/patch-offline-html.mjs 把 index.html 裡「判斷瀏覽器
+//   支不支援 module」的偵測邏輯整段拿掉，強制永遠走 legacy（非 module）bundle，
+//   同時拿掉 crossorigin（一樣會讓瀏覽器改用 CORS 模式抓取，file:// 底下同樣被擋）。
+//   CSS 的 <link> 完全不受這些調整影響。
 const isOfflineBuild = process.env.VITE_BUILD_TARGET === 'offline'
 
 // https://vite.dev/config/
@@ -20,18 +25,13 @@ export default defineConfig({
     vue(),
     vueJsx(),
     vueDevTools(),
-    legacy({
-      targets: ['defaults', 'not IE 11'],
-      renderModernChunks: !isOfflineBuild,
-    }),
+    ...(isOfflineBuild ? [legacy({ targets: ['defaults', 'not IE 11'] })] : []),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  // offline build 用相對路徑，這樣不管 index.html 被放在哪個資料夾層級，
-  // 或直接用 file:// 雙擊打開，資源路徑都抓得到；一般 build 維持絕對路徑（Vercel 用）
   base: isOfflineBuild ? './' : '/',
   build: {
     outDir: isOfflineBuild ? 'dist-offline' : 'dist',

@@ -4,9 +4,9 @@ import WheelView from '@/views/WheelView.vue'
 import LunchGroupView from '@/views/LunchGroupView.vue'
 import SplitResultView from '@/views/SplitResultView.vue'
 
-// offline build（file:// 雙擊打開）不能用 createWebHistory：
-// history.pushState 在 file:// 這種「null origin」底下換路徑會直接丟 SecurityError，
-// 所以 offline build 要改用 hash 模式（網址帶 #），才能在雙擊打開時正常切換頁面
+// 雙擊 index.html（file://）打開時，沒有真正的伺服器路徑可以比對，
+// history.pushState 在 file:// 這種 null origin 底下換路徑也會直接丟 SecurityError，
+// 乾淨網址的 history 模式沒辦法用，要改用 hash 模式（網址帶 #）
 const isOfflineBuild = import.meta.env.VITE_BUILD_TARGET === 'offline'
 
 const router = createRouter({
