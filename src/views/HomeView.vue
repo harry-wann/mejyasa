@@ -129,7 +129,7 @@ onUnmounted(() => {
       </div>
 
       <div class="home-hero__lunch-card-carousel-container d-flex align-items-center">
-        <button @click="doNextSlide" class="home-hero__lunch-card-carousel-arrow btn">⬅️</button>
+        <button @click="doNextSlide" class="home-hero__lunch-card-carousel-arrow btn">←</button>
 
         <div class="home-hero__lunch-card-carousel overflow-hidden">
           <div
@@ -169,7 +169,7 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <button @click="doPrevSlide" class="home-hero__lunch-card-carousel-arrow btn">➡️</button>
+        <button @click="doPrevSlide" class="home-hero__lunch-card-carousel-arrow btn">→</button>
       </div>
     </section>
 
