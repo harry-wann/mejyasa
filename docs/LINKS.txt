@@ -1,0 +1,11 @@
+等等吃什麼 - 相關連結
+=====================
+
+線上網站 (Production)
+https://mejyasa.vercel.app/
+
+GitHub Repository
+https://github.com/harry-wann/what-to-eat
+
+簡報 (Google Slides)
+https://docs.google.com/presentation/d/1kTDI0jHcuooh44VSEnP68jSBQBEbGwW_A9UrIYA2DHc/edit?slide=id.p3#slide=id.p3

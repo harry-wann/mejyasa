@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Layout: Navbar
+   Bootstrap 負責主要排版 class，例如 container-fluid、d-flex、position-relative。
+   這裡只補設計稿需要、Bootstrap 不方便直接表達的 layout 數值。
+   ========================================================================== */
+
+.site-navbar {
+    /* 填：Navbar 高度，例如 80px */
+    /* 填：Navbar 背景色，如果設計稿不是透明 */
+    /* 填：Navbar 下方 border 或陰影，如果設計稿有分隔感 */
+    /* 不填：左右靠邊、置中、flex，這些先用 Bootstrap class */
+    height: 80px;
+}
+
+.site-navbar__inner {
+    /* 填：Navbar 內層左右 padding，如果 Bootstrap spacing 不符合設計稿 */
+    /* 填：Navbar 內容最大寬度，如果未來不要滿版內容 */
+    /* 不填：display flex、position relative，這些先用 Bootstrap class */
+}
+
+.site-navbar__brand-area {
+    /* 通常不填：Logo 靠左與垂直置中先用 Bootstrap class */
+    /* 可填：只有 Bootstrap 間距不符合設計稿時，才補 margin / padding */
+}
+
+.site-navbar__nav-area {
+    /* 通常不填：中間置中先用 Bootstrap class */
+    /* 可填：導覽區最大寬度，或特殊顯示/隱藏需求 */
+}
+
+.site-navbar__action-area {
+    /* 通常不填：CTA 靠右與垂直置中先用 Bootstrap class */
+    /* 可填：只有 Bootstrap 間距不符合設計稿時，才補 margin / padding */
+}
+
+.site-navbar__menu {
+    /* 填：導覽項目之間的 gap，如果不用 Bootstrap gap class */
+    /* 填：list-style / padding / margin，如果這裡使用 ul/li 結構 */
+}
+
+.site-navbar__menu-item {
+    /* 通常不填：單一項目的間距優先交給 .site-navbar__menu 的 gap */
+    /* 不填：文字顏色、字級、hover，這些放 components.css 的 .nav-link-custom */
+}
+
+/* ==========================================================================
+   Layout: Responsive
+   放共用 RWD 版面調整。
+   ========================================================================== */
+
+@media (max-width: 767.98px) {
+    .site-navbar {
+        /* 填：手機版 Navbar 高度，如果與桌機不同 */
+        /* 填：手機版背景、border、陰影，如果與桌機不同 */
+    }
+
+    .site-navbar__inner {
+        /* 填：手機版左右 padding，如果與桌機不同 */
+    }
+
+    .site-navbar__brand-area {
+        /* 通常不填：手機版 Logo 位置先用 Bootstrap class */
+        /* 可填：手機版 Logo 區塊特殊寬度或間距 */
+    }
+
+    .site-navbar__nav-area {
+        /* 填：手機版是否隱藏桌機 nav links */
+    }
+
+    .site-navbar__action-area {
+        /* 填：手機版是否隱藏 CTA，或改成 menu button 的區塊尺寸 */
+    }
+}

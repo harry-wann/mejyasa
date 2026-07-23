@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Design Tokens
+   全站共用色票與基礎變數。
+   ========================================================================== */
+
+:root {
+    --color-cream: #fff8ed; /* 頁面背景色、淡色區塊背景、卡片外層底色 */
+    --color-tomato: #f25c54; /* 主要按鈕、重要 CTA、active 狀態、重點標籤 */
+    --color-mustard: #ffd166; /* 輔助重點、tag 背景、輪盤區塊、插畫感裝飾 */
+    --color-coffee: #3d2c2e; /* 主要文字、標題、Logo 文字、深色 icon */
+    --color-gray: #8a817c; /* 次要文字、說明文字、placeholder、非 active 導覽 */
+    --color-green: #2a9d8f; /* 成功狀態、已付款、完成提示、付款進度 */
+    --color-orange: #f4a261; /* 警告狀態、未付款、提醒、需要注意的金額 */
+    --color-white: #ffffff; /* 卡片背景、表單背景、白底按鈕、Navbar 白底 */
+
+    --font-family-base: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: var(--color-cream);
+    /* 設計稿頁面左右留白為 64px。
+       外層 .container-fluid 會自帶約 12px 的 gutter（Bootstrap 預設），
+       所以這裡設 52：52 + 12 = 64，剛好對齊設計稿。 */
+    padding-left: 52px;
+    padding-right: 52px;
+}
+
+nav {
+    height: 80px;
+}

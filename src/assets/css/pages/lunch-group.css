@@ -1,0 +1,321 @@
+/* ==========================================================================
+   Page: Lunch Group（開團點餐）
+   只放 Lunch Group 頁特有樣式。共用 navbar、按鈕可沿用 components.css。
+   ========================================================================== */
+
+.lunch-group-page {
+    /* 填：頁面最大寬度 / 置中策略，和 Home / Wheel 保持一致 */
+}
+
+/* ---- 主內容 ---- */
+
+.lunch-group-main {
+    /* 填：主內容上下 padding / 區塊 gap */
+    gap: 20px;
+    padding: 28px 0;
+}
+
+.lunch-group-overview {
+    /* 填：上方兩欄容器 gap；手機直排、桌機橫排由 Bootstrap class 控制 */
+    gap: 20px;
+}
+
+.lunch-group-overview--contain {
+    flex: 1 1 0%;
+}
+
+/* ---- 共用卡片殼：本頁卡片外觀 ---- */
+
+.lunch-group-info-card,
+.lunch-group-form-card,
+.lunch-group-orders-card {
+    /* 填：白底 / border / radius / overflow / width */
+    background-color: var(--color-white);
+    border: 1px solid #3D2C2E1F;
+    border-radius: 10px;
+}
+
+.lunch-group-info-card,
+.lunch-group-form-card {
+    /* 填：桌機等寬或 flex 行為 */
+    padding: 24px;
+    gap: 20px;
+}
+
+.lunch-group-card-header {
+    /* 填：卡片標題列 layout / padding / border-bottom（如果需要） */
+}
+
+.lunch-group-card-title {
+    /* 填：h2/h3 字級 / 字重 / 顏色 / margin */
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--color-coffee);
+    margin: 0;
+}
+
+.lunch-group-status {
+    /* 填：收單中 badge 的背景 / border / radius / padding / 字級 */
+    padding: 4px 10px;
+    background-color: var(--color-mustard);
+    font-size: 11px;
+    font-weight: 700;
+
+    border-radius: 6px;
+    border: 1px solid rgba(61, 44, 46, 0.12);
+}
+
+/* ---- 午餐團資訊卡 ---- */
+
+.lunch-group-store {
+    /* 填：店家資訊區背景 / border / radius / padding / margin */
+    background-color: var(--color-cream);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(61, 44, 46, 0.08);
+    gap: 4px;
+}
+
+.lunch-group-store__label {
+    /* 填：小標「店家」字級 / 字重 / 顏色 / letter-spacing */
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-gray);
+}
+
+.lunch-group-store__name {
+    /* 填：店名文字字級 / 字重 / 顏色 / margin */
+    margin: 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-coffee);
+}
+
+.lunch-group-info-list {
+    /* 填：資訊列容器 */
+    gap: 12px;
+}
+
+.lunch-group-info-row {
+    /* 填：單列 layout / padding / border-bottom */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(61, 44, 46, 0.06);
+}
+
+.lunch-group-info-row__label {
+    /* 填：左側 icon + label 的排列 / gap / 字級 / 顏色 */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-gray);
+}
+
+.lunch-group-info-row__icon {
+    font-size: 16px;
+    color: var(--color-coffee);
+}
+
+.lunch-group-info-row__value {
+    /* 填：右側值的字級 / 字重 / 顏色 */
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-coffee);
+}
+
+.lunch-group-form-card-reminder {
+    padding: 14px;
+    /* gap: 6px; */
+    background-color: var(--color-cream);
+    border: 1px solid rgba(61, 44, 46, 0.08);
+    border-radius: 8px;
+}
+
+.lunch-group-form-card-reminder-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-coffee)
+}
+
+.lunch-group-form-card-reminder-desc {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-gray)
+}
+
+.lunch-group-form-card-fields {
+    gap: 12px;
+}
+
+.lunch-group-form-card-price_amount {
+    gap: 12px;
+}
+
+/* ---- 新增餐點表單 ---- */
+
+.lunch-group-form {
+    /* 填：form 內部垂直排列 / gap */
+}
+
+.lunch-group-form__fields {
+    /* 填：欄位群組排列 / gap */
+}
+
+.lunch-group-form__row {
+    /* 填：金額 + 數量那一列的 gap / responsive */
+}
+
+.lunch-group-field {
+    /* 填：單一欄位 wrapper */
+}
+
+.lunch-group-field--price {
+    /* 填：金額欄在桌機時的 flex 比例 */
+}
+
+.lunch-group-field--quantity {
+    /* 填：數量欄在桌機時的固定寬度 */
+}
+
+.lunch-group-field__label {
+    /* 填：label 字級 / 字重 / 顏色 / letter-spacing */
+}
+
+.lunch-group-input {
+    /* 填：input/select/textarea 共用外觀 */
+}
+
+.lunch-group-form__submit {
+    /* 填：表單送出按鈕是否滿版 / 高度 */
+}
+
+/* ---- 訂餐清單 ---- */
+
+.lunch-group-orders-card {
+    /* 填：下方大卡片寬度 / margin */
+}
+
+.lunch-group-orders-card__header-row {
+    border-bottom: 1px solid rgba(61, 44, 46, 0.08);
+}
+
+.lunch-group-orders-card__header {
+    /* 填：標題列 layout / padding / border-bottom */
+    margin: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--color-coffee);
+}
+
+.lunch-group-orders-card__count {
+    /* 填：右側「3 筆訂單」字級 / 顏色 */
+    padding: 0 16px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.lunch-group-table-wrap {
+    /* 填：表格外層 overflow-x，手機避免爆版 */
+    overflow-x: auto;
+}
+
+.lunch-group-table {
+    /* 填：table 寬度 / border-collapse / 字級 */
+    table-layout: fixed;
+    /* border-collapse: separate; */
+    width: 100%;
+    padding: 0 16px;
+}
+
+/* 依 Figma node 40:330 各欄比例換算，欄寬固定後內容變動不會牽動整張表格重排 */
+.lunch-group-table th:nth-child(1) {
+    width: 12%;
+    padding-left: 16px;
+}
+
+.lunch-group-table th:nth-child(2) {
+    width: 16%;
+}
+
+.lunch-group-table th:nth-child(3) {
+    width: 11%;
+}
+
+.lunch-group-table th:nth-child(4) {
+    width: 9%;
+}
+
+.lunch-group-table th:nth-child(5) {
+    width: 14%;
+}
+
+.lunch-group-table th:nth-child(7) {
+    width: 20%;
+    text-align: center;
+}
+
+.lunch-group-table th {
+    /* 填：表頭背景 / 字級 / 字重 / 顏色 / padding */
+    padding: 12px 0;
+    background-color: var(--color-cream);
+    font-size: 11px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--color-gray);
+    border-bottom: 1px solid rgba(61, 44, 46, 0.08);
+}
+
+.lunch-group-table td {
+    /* 填：表格內容 padding / border-bottom / 顏色 */
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+.lunch-group-table__border-bottom td {
+    border-bottom: 1px solid rgba(61, 44, 46, 0.08);
+}
+
+.lunch-group-table td.lunch-group-table__name {
+    /* 填：姓名欄強調字重 */
+    font-weight: 700;
+    padding-left: 16px;
+}
+
+.lunch-group-table__subtotal {
+    /* 填：小計欄強調字重 */
+    font-weight: 700;
+}
+
+.lunch-group-delete-button {
+    /* 填：刪除按鈕外觀；不要改共用 button */
+}
+
+.lunch-group-total-row {
+    /* 填：總計列背景 / border-top / layout */
+}
+
+.lunch-group-total-row__note {
+    /* 填：左側品項合計說明 */
+    padding-left: 16px;
+    font-size: 13px;
+    color: var(--color-gray);
+    gap: 6px;
+}
+
+.lunch-group-total-row__amount {
+    /* 填：總金額 tomato / 字級 / 字重 */
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-tomato);
+}
+
+.lunch-group-table__action {
+    text-align: center;
+}

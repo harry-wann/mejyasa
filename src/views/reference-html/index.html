@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>等等吃什麼</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./assets/css/base.css" />
+        <link rel="stylesheet" href="./assets/css/layout.css" />
+        <link rel="stylesheet" href="./assets/css/components.css" />
+        <link rel="stylesheet" href="./assets/css/pages/home.css" />
+    </head>
+    <body>
+        <div class="home-page container-fluid d-flex flex-column min-vh-100">
+            <nav
+                class="nav d-flex align-items-center justify-content-center position-relative"
+            >
+                <div class="position-absolute start-0 brand-logo">
+                    <span class="brand-logo__icon">🍱</span>
+                    <span class="brand-logo__text">等等吃什麼</span>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center">
+                    <a class="nav-link-custom is-active">首頁</a>
+                    <a class="nav-link-custom">今天吃什麼</a>
+                    <a class="nav-link-custom">開團點餐</a>
+                    <a class="nav-link-custom">分帳結果</a>
+                </div>
+
+                <div class="position-absolute end-0">
+                    <a class="btn-primary-custom">建立午餐團</a>
+                </div>
+            </nav>
+
+            <section class="home-hero flex-grow-1 d-flex align-items-center">
+                <div class="home-hero__content flex-fill">
+                    <span class="home-hero__badge">📌 上班族午餐救星</span>
+                    <h1> <span class="home-hero__title">中午吃什麼？</span><br> <span class="home-hero__title-accent">等等轉一下。</span></h1>
+                    <p class="home-hero__subtitle">幫你決定午餐、揪同事開團，自動分帳，誰還沒付錢一眼看清楚。</p>
+
+                    <div class="home-hero__actions d-flex">
+                        <a class="btn-primary-custom" href="">今天吃什麼 🎲</a>
+                        <a class="btn-secondary-custom" href="">看看怎麼用 →</a>
+                    </div>
+
+                </div>
+                <div class="home-hero__lunch-card card-custom flex-shrink-0">
+                    <div class="card-custom__header">
+                        <span class="card-custom__eyebrow">✦ 今日命運午餐</span>
+                        <h2>雞腿便當</h2>
+                    </div>
+
+                    <div class="card-custom__body">
+                        <ul>
+                            <li>📍距離公司 5 分鐘</li>
+                            <li>💰預估 $120</li>
+                            <li>😆適合：想吃飽、懶得想、今天很累</li>
+                        </ul>
+                        <div class="card-custom__tags">
+                            <span class="tag">#吃得飽</span>
+                            <span class="tag">#不踩雷</span>
+                            <span class="tag">#社畜續命</span>
+                        </div>
+                    </div>
+
+                    <div class="card-custom__footer">
+                        <a href="" class="btn-dark-custom ">用這家開團 →</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="home-features d-flex flex-column flex-md-row">
+                <div class="home-features__card home-features__card--mustard">
+                    <span>🍱</span>
+                    <h3>不知道吃什麼</h3>
+                    <p>輪盤幫你從餐廳清單裡抽一個，減少午餐選擇困難。</p>
+                </div>
+                <div class="home-features__card home-features__card--white">
+                    <span>🧾</span>
+                    <h3>同事一起點</h3>
+                    <p>建立午餐團，大家自己加餐點、數量和備註。</p>
+                </div>
+                <div class="home-features__card home-features__card--tomato">
+                    <span>💸</span>
+                    <h3>分帳不用吵</h3>
+                    <p>自動計算外送費、折扣和每個人應付金額。</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

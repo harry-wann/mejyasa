@@ -1,0 +1,340 @@
+/* ==========================================================================
+   Component: Logo
+   可重複使用的品牌 / Logo 區塊。
+   ========================================================================== */
+
+.brand-logo {
+    /* 填：Logo 文字與 icon 之間的 gap，如果不用 Bootstrap gap class */
+    /* 填：連結底線是否移除 */
+    /* 填：Logo 整體文字顏色，如果 icon 和文字同色 */
+
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 6px;
+    text-decoration: none;
+}
+
+.brand-logo__icon {
+    /* 填：便當 icon 字級 */
+    font-size: 24;
+}
+
+.brand-logo__text {
+    /* 填：品牌文字字級 */
+    font-size: 20px;
+    /* 填：品牌文字字重 */
+    font-weight: 900;
+    /* 填：品牌文字顏色 */
+    color: var(--color-coffee);
+}
+
+/* ==========================================================================
+   Component: Buttons
+   可重複使用的按鈕外觀。
+   ========================================================================== */
+
+.btn-primary-custom {
+    /* 填：背景色 */
+    background-color: var(--color-tomato);
+    /* 填：文字顏色 */
+    color: var(--color-white);
+    /* 填：padding */
+    padding: 10px 24px;
+    /* 填：border / border-color */
+    border: none;
+    /* 填：border-radius */
+    border-radius: 10px;
+    /* 填：字級與字重 */
+    font-size: 16px;
+    font-weight: 900;
+    /* 填：hover / focus 狀態，完成基本狀態後再補 */
+
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary-custom {
+    /* 填：背景色 */
+    /* 填：文字顏色 */
+    color: var(--color-coffee);
+    /* 填：padding */
+    padding: 10px 24px;
+    /* 填：border / border-color */
+    border: 2px solid var(--color-coffee);
+    border-radius: 10px;
+    /* 填：border-radius */
+    /* 填：字級與字重 */
+    font-size: 16px;
+    font-weight: 900;
+
+    text-decoration: none;
+}
+
+.btn-dark-custom {
+    /* 填：背景色 */
+    background-color: var(--color-coffee);
+    /* 填：文字顏色 */
+    color: var(--color-white);
+    /* 填：padding */
+    padding: 10px 24px;
+    /* 填：border / border-color */
+    border: none;
+    /* 填：border-radius */
+    border-radius: 10px;
+    /* 填：字級與字重 */
+    font-size: 16px;
+    font-weight: 900;
+    /* 填：hover / focus 狀態，完成基本狀態後再補 */
+
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-dark-small-custom {
+    /* 填：背景色 */
+    background-color: var(--color-coffee);
+    /* 填：文字顏色 */
+    color: var(--color-white);
+    /* 填：padding */
+    padding: 6px 20px;
+    /* 填：border / border-color */
+    border: none;
+    /* 填：border-radius */
+    border-radius: 10px;
+    /* 填：字級與字重 */
+    font-size: 13px;
+    font-weight: 900;
+    white-space: nowrap;
+    /* 填：hover / focus 狀態，完成基本狀態後再補 */
+
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-text-custom {
+    background: none;
+    color: var(--color-gray);
+    padding: 6px 4px;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.btn-delete-custom {
+    /* 填：背景色 */
+    background-color: var(--color-white);
+    /* 填：文字顏色 */
+    color: var(--color-tomato);
+    /* 填：padding */
+    padding: 4px 12px;
+    /* 填：border / border-color */
+    border: 1px solid var(--color-tomato);
+    /* 填：border-radius */
+    border-radius: 4px;
+    /* 填：字級與字重 */
+    font-size: 12px;
+    font-weight: 700;
+    /* 填：hover / focus 狀態，完成基本狀態後再補 */
+
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Component: Navigation Link
+   可重複使用的導覽連結外觀。
+   ========================================================================== */
+
+.nav-link-custom {
+    /* 填：導覽文字顏色 */
+     color: #3d2c2e;
+    /* 填：導覽文字字級 */
+    font-size: 15px;
+    /* 填：導覽文字字重 */
+    font-weight: 500;
+    /* 填：連結底線是否移除 */
+    /* 填：hover 狀態顏色 */
+    padding: 10px; /* 增加點擊範圍 */
+
+    text-decoration: none;
+}
+
+.nav-link-custom.is-active {
+    /* 填：目前頁面的 active 顏色 */
+    /* 填：active 背景、底線或字重，依設計稿決定 */
+    color: #f25c54;
+}
+
+/* ==========================================================================
+   Component: Page Heading
+   Home 以外的內頁標題區（Wheel / Lunch Group / Split Result）。
+   ========================================================================== */
+
+.sub-page .nav {
+    border-bottom: 1px solid rgba(61, 44, 46, 0.10);
+}
+
+.page-heading {
+    gap: 4px;
+    padding-top: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(61, 44, 46, 0.08);
+}
+
+.page-heading__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--color-coffee);
+}
+
+.page-heading__subtitle {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+/* ==========================================================================
+   Component: Badge
+   狀態標籤，例如已付款、未付款、代墊者。
+   ========================================================================== */
+
+.badge-custom {
+    /* 填：display */
+    /* 填：padding */
+    /* 填：border-radius */
+    /* 填：字級與字重 */
+}
+
+.badge-custom--success {
+    /* 填：已付款狀態的背景色與文字色 */
+}
+
+.badge-custom--warning {
+    /* 填：未付款狀態的背景色與文字色 */
+}
+
+.badge-custom--primary {
+    /* 填：代墊者或重點狀態的背景色與文字色 */
+}
+
+/* ==========================================================================
+   Component: Card
+   可重複使用的卡片外觀。
+   ========================================================================== */
+
+.card-custom {
+    /* 填：背景色 */
+    background-color: var(--color-white);
+    /* 填：border / border-color */
+    border: 1.8px solid rgba(61, 44, 46, 0.15);
+    /* 填：border-radius */
+    border-radius: 10px;
+    /* 填：box-shadow */
+    box-shadow: 4px 4px 0 var(--color-coffee);
+    /* 填：padding */
+
+    overflow: hidden;
+}
+
+.card-custom__header {
+    /* 填：標題區 margin-bottom */
+    /* 填：標題區 padding-bottom 或 border-bottom，如果設計稿有分隔線 */
+    background-color: var(--color-tomato);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: var(--color-white);
+}
+
+/* header 上方的小標（eyebrow），例如「✦ 今日命運午餐」。顏色沿用 header 的白字 */
+.card-custom__eyebrow {
+    /* 填：字級 */
+    font-size: 11px;
+    /* 填：字重 */
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.card-custom__header h2 {   
+    margin: 0;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.card-custom__body {
+    /* 填：內容區元素間距 */
+    padding: 20px;
+    color: var(--color-coffee);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-custom__body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.card-custom__footer {
+    /* 填：底部區 margin-top */
+    padding: 0 20px 20px;
+    /* 填：底部區 padding-top 或 border-top，如果設計稿有分隔線 */
+}
+
+.card-custom__footer .btn-dark-custom {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Component: Tag
+   小型分類標籤，例如 #吃得飽。
+   ========================================================================== */
+.card-custom__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    /* 填：display */
+    display: inline-flex;
+    align-items: center;
+    /* 填：padding */
+    padding: 4px 12px;
+    /* 填：border-radius */
+    border: 1px solid rgba(61, 44, 46, 0.10);
+    border-radius: 8px;
+    /* 填：背景色 */
+    background-color: var(--color-cream);
+    /* 填：文字色 */
+    color: var(--color-gray);
+    /* 填：字級與字重 */
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.wte-input-full {
+    width: 100%;
+    flex: 1;
+}

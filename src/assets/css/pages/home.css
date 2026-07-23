@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Page: Home
+   只放 Home 首頁特有樣式，不放 Navbar / Button / Card 共用外觀。
+   ========================================================================== */
+
+.home-page {
+    /* 填：Home 頁背景色 */
+    /* 填：頁面最小高度，如果需要撐滿畫面 */
+
+    max-width: 1312px;       /* 設計稿內容寬 (1440 − 左右 padding) */
+    margin-inline: auto;     /* 水平置中 */
+}
+
+.home-hero {
+    /* 填：Hero 上下 padding */
+    /* 填：Hero 與 Navbar / Features 的間距 */
+    /* 不填：Bootstrap grid 已處理的欄位排列 */
+    gap: 80px;
+}
+
+.home-hero__content {
+    /* 填：文案區最大寬度 */
+    /* 填：標籤、標題、副標之間的垂直間距 */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 540px;
+}
+
+.home-hero__badge {
+    align-self: flex-start;
+    padding: 4px 12px;
+    background-color: var(--color-mustard);
+    border: 1px solid rgba(61, 44, 46, 0.15);
+    border-radius: 6px;
+    color: var(--color-coffee);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.home-hero__title {
+    font-size: 58px;
+    font-weight: 900;
+    color: var(--color-coffee);
+}
+
+/* 主標題第二行的強調色（紅色那行），屬於標題的一部分 */
+.home-hero__title-accent {
+    font-size: 58px;
+    font-weight: 900;
+    color: var(--color-tomato);
+}
+
+/* 標題下方的說明副標（幫你決定午餐…那段） */
+.home-hero__subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-gray);
+}
+
+.home-hero__actions {
+    /* 填：CTA 按鈕之間的 gap，如果不用 Bootstrap gap class */
+    margin-top: 16px;
+    gap: 16px;
+    /* 填：手機版按鈕是否滿版的專用規則 */
+}
+
+.home-hero__lunch-card-carousel-container {
+    
+}
+
+.home-hero__lunch-card-carousel {
+    width: 376px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.home-hero__lunch-card-carousel-track {
+    gap: 30px;
+    padding-left: 18px;
+    /* transition 交給 JS 的 trackStyle 動態控制，跳轉瞬間需要能關掉動畫 */
+}
+
+.home-hero__lunch-card-carousel-arrow {
+    font-size: 30px;
+}
+
+.home-hero__lunch-card {
+    /* 填：今日命運午餐卡片在 Hero 裡的最大寬度或特殊位置 */
+    /* 不填：卡片背景、圓角、陰影，這些放 components.css 的 .card-custom */
+    width: 336px;
+}
+
+.home-features {
+    gap: 24px;
+    padding-bottom: 64px;
+}
+
+.home-features__card {
+    flex: 1; 
+    /* 填：特色區塊上方間距 */
+    padding: 24px;
+    /* 填：特色卡之間的 gap，如果不用 Bootstrap gap class */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* 不填：Bootstrap grid 已處理的欄位排列 */
+    border: 1px solid rgba(61, 44, 46, 0.12);
+    border-radius: 10px;
+
+    --card-text: var(--color-coffee);
+    --card-text-dim: var(--color-gray);
+}
+
+.home-features__card--mustard {
+    background-color: var(--color-mustard);
+}
+
+.home-features__card--white {
+    background-color: var(--color-white);
+}
+
+.home-features__card--tomato {
+    background-color: var(--color-tomato);
+    color: var(--color-white);
+
+    --card-text: #ffffff;
+    --card-text-dim: rgba(255, 255, 255, 0.80);
+}
+
+.home-features__card h3 {
+    color: var(--card-text);
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.home-features__card p {
+    color: var(--card-text-dim);
+    font-size: 13px;
+    font-weight: 400;
+}
