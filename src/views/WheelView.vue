@@ -116,7 +116,10 @@ function handleSpin() {
 }
 
 function selectCandidate(index: number) {
-  spinToIndex(index)
+  if (isSpinning.value || index === currentIndex.value) {
+    return
+  }
+  currentIndex.value = index
 }
 
 function spinFinished() {
